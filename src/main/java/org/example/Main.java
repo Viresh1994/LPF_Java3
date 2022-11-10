@@ -20,7 +20,21 @@ public class Main {
 
         obj.sortArrayAsc(arr);
 
+        System.out.println("second largest : " +obj.secondlargestElements(arr));
+
     }
+
+    private int secondlargestElements(int[] arr) {
+        int largest = largestElement(arr);
+        int secondlargest = arr[0];
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] < largest && arr[i] > secondlargest){
+                secondlargest=arr[i];
+            }
+        }
+        return secondlargest;
+    }
+
 
     private void sortArrayAsc(int[] arr) {
         for(int i=0; i<arr.length; i++){
