@@ -4,13 +4,34 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 3, 4, 7, 3, 4, 6, 4, 6, 3, 35, 5, 5, 35, 322, 3, 5, 6, 6};
+        int[] arr = {1, 2, 3, 4, 7, 3, 4, 6, 4, 6, 3, 35, 5, 5, 35, 322, 3, 5, 6, 6,0};
         Main obj = new Main();
         obj.printArray(arr);
         System.out.println("+++++++++++++++++++++++");
         int size = arr.length;
         countFrequency(arr, size);
 
+        System.out.println("Largest elements from array : " +obj.largestElement(arr));
+        System.out.println("Smallest elements from array : " +obj.smallestElement(arr));
+
+    }
+
+    private int smallestElement(int[] arr) {
+        int smallest=arr[0];
+        for(int i=0; i<arr.length; i++){
+            if(smallest > arr[i])
+                smallest=arr[i];
+        }
+        return smallest;
+    }
+
+    private int largestElement(int[] arr) {
+        int largest = arr[0];
+        for(int i=0; i<arr.length; i++){
+            if(largest < arr[i])
+                largest=arr[i];
+        }
+        return largest;
     }
 
     private static void countFrequency(int[] arr, int size) {
