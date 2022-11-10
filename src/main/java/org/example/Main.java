@@ -14,6 +14,15 @@ public class Main {
         System.out.println("Largest elements from array : " +obj.largestElement(arr));
         System.out.println("Smallest elements from array : " +obj.smallestElement(arr));
 
+        obj.evenPosition(arr);
+
+    }
+
+    private void evenPosition(int[] arr) {
+        for(int i=0; i<arr.length;i++) {
+            if (i % 2 == 0)
+                System.out.println("Position :" +i+ " element is " + arr[i]);
+        }
     }
 
     private int smallestElement(int[] arr) {
