@@ -15,13 +15,21 @@ public class Main {
         System.out.println("Smallest elements from array : " +obj.smallestElement(arr));
 
         obj.evenPosition(arr);
+        obj.oddPosition(arr);
 
+    }
+
+    private void oddPosition(int[] arr) {
+        for(int i=0; i<arr.length; i++){
+            if(i%2==1)
+                System.out.println("odd Position :" +i+ " element is " + arr[i]);
+        }
     }
 
     private void evenPosition(int[] arr) {
         for(int i=0; i<arr.length;i++) {
             if (i % 2 == 0)
-                System.out.println("Position :" +i+ " element is " + arr[i]);
+                System.out.println("even Position :" +i+ " element is " + arr[i]);
         }
     }
 
