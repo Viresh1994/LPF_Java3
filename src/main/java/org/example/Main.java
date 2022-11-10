@@ -16,7 +16,32 @@ public class Main {
 
         obj.evenPosition(arr);
         obj.oddPosition(arr);
+        obj.reverse(arr);
 
+        obj.sortArrayAsc(arr);
+
+    }
+
+    private void sortArrayAsc(int[] arr) {
+        for(int i=0; i<arr.length; i++){
+            for(int j=i+1; j<arr.length; j++)
+            {
+                int tmp=0;
+                if(arr[i] > arr[j])
+                {
+                    tmp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=tmp;
+                }
+            }
+            System.out.println("sorted array "+arr[i]);
+        }
+    }
+
+    private void reverse(int[] arr) {
+        for(int i=arr.length-1; i>=0; --i){
+            System.out.println("reverse order : " + arr[i]);
+        }
     }
 
     private void oddPosition(int[] arr) {
