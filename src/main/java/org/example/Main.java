@@ -22,6 +22,17 @@ public class Main {
 
         System.out.println("second largest : " +obj.secondlargestElements(arr));
 
+        obj.duplicateElements(arr);
+
+    }
+
+    private void duplicateElements(int[] arr) {
+        for(int i=0; i<arr.length;i++){
+            for(int j=i+1; j<arr.length;j++){
+                if(arr[i]==arr[j])
+                    System.out.println("Duplicates elements are:"+arr[j]);
+            }
+        }
     }
 
     private int secondlargestElements(int[] arr) {
@@ -115,4 +126,6 @@ public class Main {
             System.out.println(j + " ");
         }
     }
+
+
 }
